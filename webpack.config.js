@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-var-requires */
+/* object-curly-spacing */
 const webpack = require("webpack")
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
@@ -34,7 +35,7 @@ module.exports = (env, options) => {
           test: /\.scss$/,
           use: [
             {loader: "style-loader"},
-            {loader: "css-loader"},
+            {loader: "css-loader", options: {modules: true}},
             {loader: "sass-loader"}
           ]
         }
