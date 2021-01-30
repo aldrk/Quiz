@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-var-requires */
-/* object-curly-spacing */
+/* eslint-disable object-curly-spacing */
+/* eslint-disable indent */
 const webpack = require("webpack")
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
