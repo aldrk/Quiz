@@ -7,8 +7,8 @@
     "start": "webpack serve --mode=development",
     "build": "rm -rf dist && webpack --mode=production",
     "lint": "eslint --ext .ts,.tsx src",
-    "lint:fix": "eslint --fix --color --ext .ts,.tsx src",
-    "prettier:write": "prettier --write src/",
+    "lint:fix": "eslint .src/ --fix --color --ext .ts,.tsx",
+    "prettier:write": "prettier .src/ --write",
     "format": "prettier --write --check src"
   },
   "author": "aldrk <al.krupoderov@gmail.com>",
