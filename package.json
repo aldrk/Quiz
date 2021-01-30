@@ -21,6 +21,7 @@
     "@types/webpack-env": "^1.16.0",
     "babel-loader": "^8.2.2",
     "html-webpack-plugin": "^4.5.1",
+    "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
     "typescript": "^4.1.3",
     "webpack": "^5.19.0",
@@ -39,12 +40,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged --relative"
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": [
+    "*.{ts,tsx}": [
+      "prettier --write",
       "eslint --fix"
+    ],
+    "*.{html,scss,css}": [
+      "prettier --write"
     ]
   }
 }
