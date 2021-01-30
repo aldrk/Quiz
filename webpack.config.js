@@ -29,6 +29,14 @@ module.exports = (env, options) => {
               cacheDirectory: true
             }
           }
+        },
+        {
+          test: /\.scss$/,
+          use: [
+            {loader: "style-loader"},
+            {loader: "css-loader"},
+            {loader: "sass-loader"}
+          ]
         }
       ]
     },
