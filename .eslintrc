@@ -1,9 +1,11 @@
 {
   "env": {
     "browser": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
   "extends": [
+    "airbnb",
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
@@ -14,7 +16,8 @@
   "parserOptions": {
     "project": "./tsconfig.json",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "tsx": true
     },
     "sourceType": "module"
   },
@@ -22,8 +25,17 @@
   "rules": {
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
     "semi": ["error", "never"],
-    "quotes": ["error", "double"]
+    "quotes": ["error", "double"],
+    "no-unused-vars": "error",
+    "no-use-before-define": "off",
+    "no-tabs": "off",
+    "no-alert": "off",
+    "arrow-body-style": "off",
+    "comma-dangle": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off"
   },
   "settings": {
     "react": {
